@@ -11,3 +11,4 @@ This package enables real-time keyboard control of the UR10e robotic manipulator
 - Network communication is done over **Bridged Adapter**.
 - The robot receives joint trajectory commands via `joint_trajectory_controller`.
 
+[Host PC - ROS 2] <--network--> [VirtualBox - URSim with External Control]
