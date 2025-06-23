@@ -77,10 +77,10 @@ Parameters:
   - 🛑 Important: The IP address must match the one configured in URSim.
 
 ### 3. Activate the trajectory controller
-
+```bash
 ros2 control set_controller_state joint_trajectory_controller active
-
-    If you’re using scaled_joint_trajectory_controller, adjust the name accordingly.
+```
+If you’re using scaled_joint_trajectory_controller, adjust the name accordingly.
 
 ### 4. Run the keyboard control node
 
