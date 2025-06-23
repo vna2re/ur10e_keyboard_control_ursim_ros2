@@ -55,22 +55,22 @@ ur10e_rviz_control/
 ---
 
 ## ▶️ Running the System
-# 1. Start the URSim simulation
+### 1. Start the URSim simulation
 
     Click Run.
 
     Press Play in the Program tab with External Control selected.
 
-# 2. On the host, activate the controller
+### 2. On the host, activate the controller
 ```bash
 ros2 control set_controller_state joint_trajectory_controller active
 ```
 
-# 3. Run the keyboard control node
+### 3. Run the keyboard control node
 ```bash
 ros2 run ur10e_rviz_control keyboard_control
 ```
-# Keyboard Bindings
+### Keyboard Bindings
 
     → / ←: Select next/previous joint
 
