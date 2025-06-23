@@ -30,3 +30,15 @@ This package enables real-time keyboard control of the UR10e robotic manipulator
 ---
 
 ## 📦 Package Structure
+ur10e_rviz_control/
+├── launch/
+│ └── display.launch.py
+├── scripts/
+│ ├── keyboard_control.cpp # C++ node for keyboard teleoperation
+│ └── dual_control.py # Optional: joystick or Python control
+├── config/
+│ └── controllers.yaml
+├── urdf/
+│ └── ur10e.urdf.xacro
+├── CMakeLists.txt
+└── package.xml
