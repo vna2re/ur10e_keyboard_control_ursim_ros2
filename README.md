@@ -55,22 +55,40 @@ ur10e_rviz_control/
 ---
 
 ## ▶️ Running the System
-### 1. Start the URSim simulation
 
-    Click Run.
+### 1. Start URSim inside VirtualBox
 
-    Press Play in the Program tab with External Control selected.
+- Ensure **URSim is in Remote Control** mode.
+- In URSim, open a Program and insert **External Control URCap**.
+- Set `Host IP` to your host machine’s IP (e.g., `192.168.31.254`).
+- Press **Play** in the Program tab to activate the External Control.
 
-### 2. On the host, activate the controller
+### 2. Launch the robot driver from host (ROS 2)
+
 ```bash
+ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur10e robot_ip:=192.168.31.216 launch_rviz:=true
+
+Parameters:
+
+    ur_type: Set to your robot type (ur10e, ur5e, etc.)
+
+    robot_ip: IP address of URSim (check via ip a in URSim terminal)
+
+    launch_rviz: Optionally launch RViz for visualization
+
+    🛑 Important: The IP address must match the one configured in URSim.
+
+3. Activate the trajectory controller
+
 ros2 control set_controller_state joint_trajectory_controller active
-```
 
-### 3. Run the keyboard control node
-```bash
+    If you’re using scaled_joint_trajectory_controller, adjust the name accordingly.
+
+4. Run the keyboard control node
+
 ros2 run ur10e_rviz_control keyboard_control
-```
-### Keyboard Bindings
+
+Keyboard Bindings
 
     → / ←: Select next/previous joint
 
@@ -78,4 +96,4 @@ ros2 run ur10e_rviz_control keyboard_control
 
     q: Exit the program
 
-The node publishes trajectory_msgs/msg/JointTrajectory to /joint_trajectory_controller/joint_trajectory.
+This node publishes trajectory_msgs/msg/JointTrajectory to /joint_trajectory_controller/joint_trajectory.
