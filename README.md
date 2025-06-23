@@ -1,5 +1,7 @@
 # ur10e_keyboard_control_ursim_ros2
+
 ![Демонстрация](images/output.gif)
+
 # UR10e Keyboard Control via ROS 2 and URSim on VirtualBox
 
 This package enables real-time keyboard control of the UR10e robotic manipulator running in **URSim (simulator)** on **VirtualBox**, using **ROS 2 Humble** running on the host machine.
