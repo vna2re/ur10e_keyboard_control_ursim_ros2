@@ -74,7 +74,7 @@ Parameters:
   - ur_type: Set to your robot type (ur10e, ur5e, etc.)
   - robot_ip: IP address of URSim (check via ip a in URSim terminal)
   - launch_rviz: Optionally launch RViz for visualization
-  🛑 Important: The IP address must match the one configured in URSim.
+  - 🛑 Important: The IP address must match the one configured in URSim.
 
 ### 3. Activate the trajectory controller
 
