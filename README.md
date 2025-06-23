@@ -87,7 +87,9 @@ ros2 control set_controller_state joint_trajectory_controller active
 
 ### 4. Run the keyboard control node
 
+```
 ros2 run ur10e_rviz_control keyboard_control
+```
 
 ### Keyboard Bindings
 
