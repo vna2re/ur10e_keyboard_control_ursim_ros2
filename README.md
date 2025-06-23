@@ -38,19 +38,41 @@ ur10e_rviz_control/
 
 ├── scripts/
 
-│ ├── keyboard_control.cpp # C++ node for keyboard teleoperation
-
-│ └── dual_control.py # Optional: joystick or Python control
+│ ├── keyboard_control.cpp
 
 ├── config/
 
-│ └── controllers.yaml
+│ └── joint_trajectory_controller.yaml
 
 ├── urdf/
 
-│ └── ur10e.urdf.xacro
+│ └── ur10e.urdf
 
 ├── CMakeLists.txt
 
 └── package.xml
 
+▶️ Running the System
+1. Start the URSim simulation
+
+    Click Run.
+
+    Press Play in the Program tab with External Control selected.
+
+2. On the host, activate the controller
+
+ros2 control set_controller_state joint_trajectory_controller active
+
+3. Run the keyboard control node
+
+ros2 run ur10e_rviz_control keyboard_control
+
+Keyboard Bindings
+
+    → / ←: Select next/previous joint
+
+    ↑ / ↓: Increase/decrease joint angle
+
+    q: Exit the program
+
+The node publishes trajectory_msgs/msg/JointTrajectory to /joint_trajectory_controller/joint_trajectory.
