@@ -14,3 +14,19 @@ This package enables real-time keyboard control of the UR10e robotic manipulator
 - The robot receives joint trajectory commands via `joint_trajectory_controller`.
 
 [Host PC - ROS 2] <--network--> [VirtualBox - URSim with External Control]
+
+---
+
+## ✅ Requirements
+
+- Ubuntu 22.04 on host machine
+- ROS 2 Humble installed
+- URSim running inside VirtualBox
+- External Control URCap installed in URSim
+- Bridged network adapter enabled in VirtualBox
+- `ur_robot_driver` installed and configured
+- Controller: `joint_trajectory_controller`
+
+---
+
+## 📦 Package Structure
