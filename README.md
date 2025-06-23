@@ -67,6 +67,7 @@ ur10e_rviz_control/
 
 ```bash
 ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur10e robot_ip:=192.168.31.216 launch_rviz:=true
+```
 
 Parameters:
 
@@ -78,17 +79,17 @@ Parameters:
 
     🛑 Important: The IP address must match the one configured in URSim.
 
-3. Activate the trajectory controller
+### 3. Activate the trajectory controller
 
 ros2 control set_controller_state joint_trajectory_controller active
 
     If you’re using scaled_joint_trajectory_controller, adjust the name accordingly.
 
-4. Run the keyboard control node
+### 4. Run the keyboard control node
 
 ros2 run ur10e_rviz_control keyboard_control
 
-Keyboard Bindings
+### Keyboard Bindings
 
     → / ←: Select next/previous joint
 
