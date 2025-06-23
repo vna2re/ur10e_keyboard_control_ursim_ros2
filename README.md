@@ -71,13 +71,10 @@ ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur10e robot_ip:=192.16
 
 Parameters:
 
-    ur_type: Set to your robot type (ur10e, ur5e, etc.)
-
-    robot_ip: IP address of URSim (check via ip a in URSim terminal)
-
-    launch_rviz: Optionally launch RViz for visualization
-
-    🛑 Important: The IP address must match the one configured in URSim.
+  - ur_type: Set to your robot type (ur10e, ur5e, etc.)
+  - robot_ip: IP address of URSim (check via ip a in URSim terminal)
+  - launch_rviz: Optionally launch RViz for visualization
+  🛑 Important: The IP address must match the one configured in URSim.
 
 ### 3. Activate the trajectory controller
 
